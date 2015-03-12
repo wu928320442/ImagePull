@@ -2,9 +2,12 @@ package com.wjj.imagepull;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ScrollView;
+import android.widget.TextView;
 
 /**
  * Created by wujiajun
@@ -14,12 +17,20 @@ import android.widget.ScrollView;
 public class MainActivity extends Activity {
 
     ScrollView scrollView;
+    TextView loginTv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         scrollView = (ScrollView) findViewById(R.id.scroll_view);
+        loginTv = (TextView) findViewById(R.id.login);
+        loginTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("imagepull","onClick");
+            }
+        });
     }
 
 

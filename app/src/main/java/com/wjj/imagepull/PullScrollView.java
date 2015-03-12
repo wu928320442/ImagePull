@@ -6,10 +6,8 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
-import android.view.animation.Interpolator;
-import android.view.animation.LinearInterpolator;
+import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.ScrollView;
 
 /**
@@ -80,7 +78,7 @@ public class PullScrollView extends ScrollView implements ViewTreeObserver.OnGlo
                     //滚动原始偏移值和现在偏移值之间的差值 eg:3~10
                     ObjectAnimator animator = ObjectAnimator.ofInt(this, "moveY", params.topMargin, -srcTopMargion);
                     animator.setDuration(200);
-                    animator.setInterpolator(new LinearInterpolator());
+                    animator.setInterpolator(new AccelerateDecelerateInterpolator());
                     animator.start();
                 }
                 break;

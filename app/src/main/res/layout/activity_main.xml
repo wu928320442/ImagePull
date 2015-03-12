@@ -31,6 +31,7 @@
         </RelativeLayout>
 
         <TextView
+            android:id="@+id/login"
             android:background="@drawable/common_btn_login_yellow"
             android:layout_width="match_parent"
             android:layout_height="100dp" />
